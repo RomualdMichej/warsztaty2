@@ -8,10 +8,12 @@ public class User {
         private String userName;
         private String email;
         private String password;
+        private int users_group_id;
 
-    public User(String userName, String email, String password) {
+    public User(String userName, String email, String password, int users_group_id) {
         this.userName = userName;
         this.email = email;
+        this.users_group_id = users_group_id;
         hashPassword(password);
     }
 
@@ -38,6 +40,8 @@ public class User {
         return password;
     }
 
+    public int getUser_group_id() { return users_group_id; }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -52,15 +56,19 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+        hashPassword(password);
     }
+
+    public void setUser_group_id(int user_group_id) { this.users_group_id = user_group_id; }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
+                "id = " + id +
+                ", userName = '" + userName + '\'' +
+                ", email = '" + email + '\'' +
+                ", password = '" + password + '\'' +
+                ", users_group_id = " + users_group_id +
                 '}';
     }
 }
