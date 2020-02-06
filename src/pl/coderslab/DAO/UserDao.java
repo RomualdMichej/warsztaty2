@@ -52,7 +52,7 @@ public class UserDao {
                 user.setUserName(resultSet.getString("username"));
                 user.setEmail(resultSet.getString("email"));
                 user.setPassword(resultSet.getString("password"));
-                user.setId(resultSet.getInt("users_group_id"));
+                user.setUser_group_id(resultSet.getInt("users_group_id"));
                 return user;
             }
         } catch (SQLException e) {

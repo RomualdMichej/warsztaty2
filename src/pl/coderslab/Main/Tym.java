@@ -41,12 +41,12 @@ public class Tym {
     }
     private static void work(int userId) {
 
+        System.out.println("\nTwój numer yrzytkownika to: " + userId + "\n");
+
         String input = "";
         Scanner scanner = new Scanner(System.in);
 
         while (!input.equals(Q)) {
-
-            System.out.println("\nTwój numer yrzytkownika to: " + input + "\n");
 
             System.out.println(WELCOME_VARIABLE);
             input = check(scanner);
